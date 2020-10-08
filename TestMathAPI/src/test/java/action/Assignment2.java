@@ -17,6 +17,8 @@ public class Assignment2 {
 	WebDriver driver;
 
 	String projPath = System.getProperty("user.dir");
+	
+	By table_Rows = By.cssSelector("div#divTrainsList > table tr");
 
 	@Before
 	public void setUp() {
@@ -34,8 +36,8 @@ public class Assignment2 {
 
 		try {
 
-			// 1 Way
-			List<WebElement> tableRows = driver.findElements(By.cssSelector("div#divTrainsList > table tr"));
+			// 1 Way - Selector
+			List<WebElement> tableRows = driver.findElements(table_Rows);
 
 			// 2 Way
 
